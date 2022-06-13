@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://sciqy.site/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="What I cannot create, I do not understand. ——Feynman"><meta charset="UTF-8"><title>Jade 使用教程——XRD定性分析 | 可乐不加冰🥤</title>
+<link href="https://sciqy.site/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://sciqy.site/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+<link rel="canonical" href="https://sciqy.site/post/xrd-datpro/" />
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://sciqy.site"><img alt="logo" style="display:inline-block;" src="https://sciqy.site/images/avatar.png"/></a><h1 title="可乐不加冰🥤" class="weaklink"><a  href="/">可乐不加冰🥤</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >🏠️主页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/math" class="selected active current nav__item" >数学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/phy" class="selected active current nav__item" >物理</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/Chem" class="selected active current nav__item" >化学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/compute" class="selected active current nav__item" >计算</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/recommand" class="selected active current nav__item" >推荐</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >🏠️主页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/math" class="selected active current nav__item" >数学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/phy" class="selected active current nav__item" >物理</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/Chem" class="selected active current nav__item" >化学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/compute" class="selected active current nav__item" >计算</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/recommand" class="selected active current nav__item" >推荐</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1655133911658" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>Jade 使用教程——XRD定性分析</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2022-04-05</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://sciqy.site/tag/lFroaDUwa/" class="tag">物理</a> | 	<a href="https://sciqy.site/tag/v_oFmYWkT/" class="tag">化学</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">500字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">2 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<img class="featureImg" alt="featureimg" src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204042327510.png" referrerpolicy="no-referrer">
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<p>简单介绍测量XRD前后简单的数据操作</p>
+<!-- more -->
+<h1 id="1-xrd实验前">1 XRD实验前</h1>
+<blockquote>
+<p>利用Jade找PDF判断XRD扫描范围</p>
+</blockquote>
+<ol>
+<li>按制定元素检索PDF卡片<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/20220405214441.png" alt="" loading="lazy"></li>
+<li>显示目标物体谱图<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/20220405214418.png" alt="" loading="lazy"></li>
+</ol>
+<p>从图中看到大概是10-50°C以内，平时通常是10-90°C，扫速是4°C/min，每幅图20 min。</p>
+<h1 id="2-jade寻峰">2 Jade寻峰</h1>
+<blockquote>
+<p>三步走寻峰法，参考<a href="https://qoclub.site/physics/condense_matter/MDI%20Jade%20%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.pdf">MDI Jade 使用手册</a></p>
+</blockquote>
+<ol>
+<li>
+<p>大海捞针：不选择<code>Use Chemistry Filter</code><br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/20220405222448.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>指定元素：勾选<code>Use Chemistry Filter</code>，并选择<code>可能</code>的元素。<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/20220405215456.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>指定峰位：左键点击<code>Peak Paint cursor</code>并在某个峰下面画出一条横线，然后再右键S/M进行检索。<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/20220405215831.png" alt="" loading="lazy"><br>
+可以得到谱图如下所示。<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/FeNCNT700-2.jpg" alt="" loading="lazy"><br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/20220405221722.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>导出数据为TXT格式<br>
+点击<code>Edit-Save-Primary Pattern *.txt</code>保存样品的数据为TXT格式。<br>
+对于PDF卡片的TXT数据按下图操作。<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/20220405220932.png" alt="" loading="lazy"><br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/20220405220959.png" alt="" loading="lazy"></p>
+</li>
+</ol>
+<h1 id="3-origin-y偏移堆积图">3 origin Y偏移堆积图</h1>
+<ol>
+<li>数据导入：导入所有txt文件，将所有数据放到一个表中，设置X轴<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204042334499.png" alt="" loading="lazy"></li>
+<li>绘制Y偏移堆积图：<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204042338116.png" alt="" loading="lazy"></li>
+<li>解除图像关联：双击图片，设置堆叠为<code>单独</code><br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204042348690.png" alt="" loading="lazy"></li>
+<li>设置图像偏移</li>
+</ol>
+<h2 id="31-样品曲线设置">3.1 样品曲线设置</h2>
+<ol>
+<li>设置组为<code>独立</code><img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204042358332.png" alt="" loading="lazy"></li>
+<li>Y轴偏移：<code>220</code><img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204042350689.png" alt="" loading="lazy"></li>
+</ol>
+<h2 id="32-pdf卡片曲线设置">3.2 PDF卡片曲线设置</h2>
+<ol>
+<li>首先设置为<code>无线条</code><br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204050001180.png" alt="" loading="lazy"></li>
+<li>设置垂直线：把其中一个的垂直线设置下垂到<code>Y=自定义附加线</code>，Y轴偏移<code>110</code>。<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204042355439.png" alt="" loading="lazy"></li>
+<li>另外一个垂直线设置下垂到<code>Y=轴的起始</code>，Y轴偏移为<code>0</code>。<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204050006720.png" alt="" loading="lazy"></li>
+</ol>
+<h2 id="33-坐标轴设置">3.3 坐标轴设置</h2>
+<ol>
+<li>双击坐标轴，设置X轴范围为XRD扫描范围，Y轴从0开始。<br>
+在网格中设置Y轴辅助线偏移<code>110</code>。<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204050011318.png" alt="" loading="lazy"></li>
+<li>设置另外的辅助线：<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204050019609.png" alt="" loading="lazy"><br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204050022512.png" alt="" loading="lazy"></li>
+</ol>
+<h2 id="34-导出">3.4 导出</h2>
+<ol>
+<li>右键导出图形<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204050023174.png" alt="" loading="lazy"></li>
+</ol>
+<h1 id="4-origin-堆积图">4 Origin 堆积图</h1>
+<ol>
+<li>按同样操作导入数据，选择<code>堆积图</code>。<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204050036507.png" alt="" loading="lazy"></li>
+<li>修改刻度：双击坐标轴修改XY轴的<code>刻度</code>、<code>刻度线标签</code>、<code>轴线和刻度线</code>显示<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204042247661.png" alt="" loading="lazy"></li>
+<li>调整比例大小：先<code>取消关联</code><br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204050057098.png" alt="" loading="lazy"></li>
+<li>从Layer3开始逐个调节图像<code>高度</code>和<code>上</code>使堆积图清晰。<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202204050058701.png" alt="" loading="lazy"></li>
+</ol>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#1-xrd%E5%AE%9E%E9%AA%8C%E5%89%8D">1 XRD实验前</a></li>
+<li><a href="#2-jade%E5%AF%BB%E5%B3%B0">2 Jade寻峰</a></li>
+<li><a href="#3-origin-y%E5%81%8F%E7%A7%BB%E5%A0%86%E7%A7%AF%E5%9B%BE">3 origin Y偏移堆积图</a>
+<ul>
+<li><a href="#31-%E6%A0%B7%E5%93%81%E6%9B%B2%E7%BA%BF%E8%AE%BE%E7%BD%AE">3.1 样品曲线设置</a></li>
+<li><a href="#32-pdf%E5%8D%A1%E7%89%87%E6%9B%B2%E7%BA%BF%E8%AE%BE%E7%BD%AE">3.2 PDF卡片曲线设置</a></li>
+<li><a href="#33-%E5%9D%90%E6%A0%87%E8%BD%B4%E8%AE%BE%E7%BD%AE">3.3 坐标轴设置</a></li>
+<li><a href="#34-%E5%AF%BC%E5%87%BA">3.4 导出</a></li>
+</ul>
+</li>
+<li><a href="#4-origin-%E5%A0%86%E7%A7%AF%E5%9B%BE">4 Origin 堆积图</a></li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+</script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"><a href="mailto:linqiyuan2016@gmail.com"title="envelope"><i class="iconfont icon-envelope"></i></a><a href="https://sciqy.site/atom.xml"title="rss"><i class="iconfont icon-rss"></i></a></div></div><div class="copyright"id="copyright"><!--<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	<span id="busuanzi_container_site_uv" style='display:none'>访客数<span id="busuanzi_value_site_uv"></span>次          &nbsp;              
+ </span>
+	<span id="busuanzi_container_site_pv" style='display:none'>访问量<span id="busuanzi_value_site_pv"></span>次</span>
+</div>-->Copyright © 2018-2022 <a href="https://sciqy.site" style="margin:0;">可乐不加冰🥤</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>33</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script type="text/javascript" async src="https://sciqy.site/media/js/prism.js"></script>
+</body>
+</html>
