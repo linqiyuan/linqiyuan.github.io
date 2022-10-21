@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://qoclub.site</id>
+    <title>可乐不加冰🥤</title>
+    <updated>2022-10-21T16:37:48.521Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://qoclub.site"/>
+    <link rel="self" href="https://qoclub.site/atom.xml"/>
+    <subtitle>唯有真诚打动人</subtitle>
+    <logo>https://qoclub.site/images/avatar.png</logo>
+    <icon>https://qoclub.site/favicon.ico</icon>
+    <rights>All rights reserved 2022, 可乐不加冰🥤</rights>
+    <entry>
+        <title type="html"><![CDATA[新手入门]]></title>
+        <id>https://qoclub.site/post/xin-shou-ru-men/</id>
+        <link href="https://qoclub.site/post/xin-shou-ru-men/">
+        </link>
+        <updated>2022-10-21T16:35:30.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1-入门">1 入门</h1>
+<ol>
+<li>关键词抓取<br>
+however<br>
+key points<br>
+challenge<br>
+the dissolution of polysulfides</li>
+<li>文章标题 ：introduction、guidence、pitfall、beginner、step-by-step、everyone、limitation</li>
+</ol>
+<h1 id="2-审稿">2 审稿</h1>
+<ol>
+<li>建立初步了解：</li>
+</ol>
+<ul>
+<li>看综述和重要文献：research rabbit</li>
+</ul>
+<ol start="2">
+<li>了解关键问题</li>
+</ol>
+<ul>
+<li>对比相关文章：scite.ai、reasarch gate、审稿意见</li>
+</ul>
+<ol start="3">
+<li>认真看研究细节和参考文献</li>
+</ol>
+<blockquote>
+<p>常见表征的问题汇总和对比（<strong>自查表</strong>）</p>
+</blockquote>
+<ul>
+<li>XAS:<br>
+<a href="https://aip.scitation.org/doi/full/10.1063/5.0008748?casa_token=26FkFTeK5-QAAAAA%3Ab7oda5GMiuZu6vLjpn_qtGlRShjgQjZkJ1fQIhoBXRQ29j7N8_eO5t6ynpq2oqjvnJ9IKVasZ_g">Single atoms or not? The limitation of EXAFS: Applied Physics Letters: Vol 116, No 19</a><br>
+<a href="https://www.sciencedirect.com/science/article/pii/S2451910321001174">X 射线吸收光谱分析和解释中的陷阱：面向普通用户的实用指南 - ScienceDirect</a></li>
+<li>CV：<br>
+<a href="https://pubs.acs.org/doi/10.1021/acs.jchemed.7b00361">A Practical Beginner’s Guide to Cyclic Voltammetry | Journal of Chemical Education</a></li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[科研小工具汇总]]></title>
+        <id>https://qoclub.site/post/ke-yan-xiao-gong-ju-hui-zong/</id>
+        <link href="https://qoclub.site/post/ke-yan-xiao-gong-ju-hui-zong/">
+        </link>
+        <updated>2022-10-21T15:47:54.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="研究">研究</h1>
+<ol>
+<li>众所周知：Google scholar、X-mol、谷歌图片、知网随问、WOS（用得不多）<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202210212327465.png" alt="" loading="lazy"></li>
+<li>文献评价：
+<ul>
+<li><a href="https://www.scite.ai/">scite.ai</a>：过了免费试用期可以用临时邮箱注册账号。<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202210212313801.png" alt="" loading="lazy"></li>
+<li><a href="https://www.researchgate.net/">Research gate</a><br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202210212312901.png" alt="" loading="lazy"></li>
+</ul>
+</li>
+<li>文献总结：
+<ul>
+<li><a href="https://www.paper-digest.com/user_console">paper-digest.com</a></li>
+<li><a href="https://www.paperdigest.org/review/">Literature Review | Paper Digest</a></li>
+<li><a href="https://article-summarizer.scholarcy.com/">Scholarcy - Article Summarizer and Flashcard Generator</a><br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202210212318271.png" alt="" loading="lazy"><br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202210212317708.png" alt="" loading="lazy"></li>
+</ul>
+</li>
+<li>文献检索与可视化（可以玩完，用处不大）：
+<ul>
+<li><a href="https://www.researchrabbit.ai/">research rabbit</a></li>
+<li><a href="https://www.connectedpapers.com/">Connected Papers | Find and explore academic papers</a></li>
+<li><a href="https://github.com/christopherkullenberg/Citepy">Citepy</a></li>
+</ul>
+</li>
+</ol>
+<h1 id="写作投稿">写作投稿</h1>
+<ol>
+<li>翻译：<a href="https://translate.google.com/?hl=zh-CN">Google 翻译</a></li>
+<li>语法检查：
+<ul>
+<li><a href="https://www.grammarly.com/">Grammaly</a></li>
+<li><a href="https://app.penelope.ai/submissions/demo/?role=author">Penelope.ai</a></li>
+<li><a href="https://www.writefull.com/affiliate?ref=andystapleton">Writefull Affiliate — Writefull</a></li>
+</ul>
+</li>
+<li>同义词句：
+<ul>
+<li><a href="https://www.thesaurus.com/browse/artificial%20intelligence">Thesaurus.com</a></li>
+<li><a href="https://quillbot.com/?utm_medium=paid_search&amp;utm_source=google&amp;utm_campaign=paraphrase_developing&amp;campaign_type=search">Paraphrasing Tool | QuillBot AI</a></li>
+</ul>
+</li>
+<li>期刊选择：<a href="https://zhuanlan.zhihu.com/p/360626024">全网期刊选择工具汇总，帮你节省60%的投稿时间！ - 知乎</a></li>
+<li>审稿意见：从Nature Com.、MDPI获取</li>
+</ol>
+<h1 id="文献追踪">文献追踪</h1>
+<ol>
+<li><a href="https://www.inoreader.com/">Inoreader</a>：可以自己用feedly创建Feed</li>
+<li>其他</li>
+</ol>
+<ul>
+<li><a href="https://app.litmaps.com/t/342e109e-d978-442d-bca8-e62ca72aa00b/ws/07b9bd33-afb3-45ca-9d6e-b2943eb3ac5e">Litmaps</a></li>
+<li><a href="https://scholar.google.com/schhp?hl=zh-CN">Google 学术搜索</a>：关键词订阅、学者订阅</li>
+<li><a href="https://www.storkapp.me/?ref=">文献鸟Stork，您忠实的科研助手，追踪新文献 (storkapp.me)</a></li>
+</ul>
+<hr>
+<h1 id="推荐">推荐</h1>
+<ul>
+<li><a href="https://github.com/bighuang624/AI-research-tools">bighuang624/AI-research-tools: AI 方向好用的科研工具 (github.com)</a><br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202210212320401.png" alt="" loading="lazy"></li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[同行评议爬取]]></title>
+        <id>https://qoclub.site/post/tong-xing-ping-yi-pa-qu/</id>
+        <link href="https://qoclub.site/post/tong-xing-ping-yi-pa-qu/">
+        </link>
+        <updated>2022-06-19T16:16:29.000Z</updated>
+        <content type="html"><![CDATA[<p>目前来说，MDPI或者Nature旗下的有较多的同行评议。所以这篇文章爬取了其同行评议，Nature旗下的下载为pdf，MDPI保存为csv格式。</p>
+<pre><code class="language-python">import requests,csv
+from bs4 import BeautifulSoup
+import requests,time,hashlib,uuid,os
+from subprocess import call
+from math import ceil
+
+##########################自定义####################################
+# IDM
+DownPath = 'E:\\Coding\\Battery\\pdf' # IDM下载路径
+IDMPath = &quot;C:\\Program Files (x86)\\Internet Download Manager\\&quot; # IDMexe路径 [idm](https://pan.iculture.cc/s/wQJFW)
+
+# 有道翻译
+app_id = 'your appid'   # 有道翻译应用id
+app_key = 'your appkey'   # 有道翻译应用密钥
+youdao_url = 'https://openapi.youdao.com/api'   # 有道api地址
+
+# 检索关键词
+searchkeyNa = 'sulfur AND catalys* AND batter*' # [Nature Advanced Search](https://www.nature.com/search/advanced)
+searchkeymdpi = '(@(abstract)sulfur@(all)batteries@(abstract)catalyst)|(@(title)Li-S)' # [MDPI - Publisher of Open Access Journals](https://www.mdpi.com/search?)
+########################################################################
+</code></pre>
+<p>可以用IDM下载，更快；也可以加上翻译。</p>
+<h1 id="调用idm下载文件">调用IDM下载文件</h1>
+<pre><code class="language-python">def IDMdown(DownUrl, DownPath, FileName):
+    os.chdir(IDMPath)
+    IDM = &quot;IDMan.exe&quot;
+    call([IDM, '/d', DownUrl, '/p', DownPath, '/f', FileName, '/a'])
+    call([IDM, '/s'])
+</code></pre>
+<h1 id="有道翻译">有道翻译</h1>
+<pre><code class="language-python">def translate(text):
+    translate_text = text
+    input_text = &quot;&quot;
+    if(len(translate_text) &lt;= 20): # 当文本长度小于等于20时，取文本
+        input_text = translate_text
+    elif(len(translate_text) &gt; 20): # 当文本长度大于20时，进行特殊处理
+        input_text = translate_text[:10] + str(len(translate_text)) + translate_text[-10:]
+    time_curtime = int(time.time())   # 秒级时间戳获取
+    uu_id = uuid.uuid4()   # 随机生成的uuid数，为了每次都生成一个不重复的数。
+    sign = hashlib.sha256((app_id + input_text + str(uu_id) + str(time_curtime) + app_key).encode('utf-8')).hexdigest()   # sign生成
+    trdata = {
+        'q':translate_text,   # 翻译文本
+        'from':&quot;en&quot;,   # 源语言
+        'to':&quot;zh-CHS&quot;,   # 翻译语言
+        'appKey':app_id,   # 应用id
+        'salt':uu_id,   # 随机生产的uuid码
+        'sign':sign,   # 签名
+        'signType':&quot;v3&quot;,   # 签名类型，固定值
+        'curtime':time_curtime,   # 秒级时间戳
+    }
+    r = requests.get(youdao_url, params = trdata).json()   # 获取返回的json()内容
+    return r[&quot;translation&quot;][0]   # 获取翻译内容
+</code></pre>
+<h1 id="下载nature旗下的pdf文件">下载Nature旗下的pdf文件</h1>
+<pre><code class="language-python">def getpdfNa(text,trans,idm):
+    pref = 'https://www.nature.com'
+    url = 'https://www.nature.com/search?'
+    data = {
+        'q' : None,
+        'order' : 'relevance',
+        'page' : 1,
+        'date_range': 'last_5_years'
+    }
+    data['q'] = text
+    html = requests.get(url, params = data)
+    soups = BeautifulSoup(html.content,'html.parser') # 获取网页内容
+    while soups.find('h1',class_=&quot;u-mb-8&quot;) == None: 
+        for soup in soups.find_all('a',class_='c-card__link u-link-inherit'): # 查找所有的a标签，target='_blank'的
+            urlnew = pref + soup.get('href')
+            soups1 = BeautifulSoup(requests.get(urlnew).content, 'html.parser') # 获取网页内容
+            for soup in soups1.find_all('h3',class_=&quot;c-article-supplementary__title u-h3&quot;):
+                if soup.get_text() == 'Peer Review File':
+                    gettitle = soups1.find('h1',class_='c-article-title').get_text()
+                    gettitle = gettitle.replace('/','-')
+                    if trans == 'cn':
+                        gettitle = translate(gettitle)
+                    dlurl = soup.find('a').get('href')
+                    if idm == 'idm':
+                        IDMdown(dlurl, DownPath, gettitle)
+                    else:
+                        r = requests.get(dlurl, stream=True)
+                        with open(DownPath+'\\'+ gettitle+'.pdf', 'wb') as f:
+                            f.write(r.content)
+                    print('下载完成')
+        data['page'] += 1
+        html = requests.get(url, params = data)
+        soups = BeautifulSoup(html.content,'html.parser') # 获取网页内容
+</code></pre>
+<h1 id="下载mdpi旗下的pdf文件">下载MDPI旗下的PDF文件</h1>
+<pre><code class="language-python">def getpdfmdpi(text):
+    li = []
+    # titlecn = ''
+    url = 'https://www.mdpi.com/search?'
+    preurl = 'https://www.mdpi.com'
+    data = {
+        'sort' :  'relevance', # or pubdate
+        'view' : 'default', # or compact
+        'page_count' : 10, # or 50, 200
+        'year_from' : 2017,
+        'year_to' : 2022,
+        'advanced' : text,
+        'page_no': 1
+    }
+
+    html = requests.get(url, params = data)
+    h1 = BeautifulSoup(html.content,'html.parser').find('h1')
+    page_max = ceil(int(h1.text[-6:-2])/10) # 获取最大页数, ceil()向上取整
+    print(page_max)
+    
+    for i in range(1,page_max+1):
+        data['page_no'] = i
+        html = requests.get(url, params = data)
+        soups = BeautifulSoup(html.content,'html.parser')
+        # 第 i 页的所有文章标题
+        for soup in soups.find_all('a',class_=&quot;title-link&quot;):
+            rrurl = preurl + soup.get('href')+ '/review_report'
+            title = soup.get_text()
+            # 如果有review_report
+            if requests.get(rrurl).status_code == 200:
+                li.append([title,rrurl])
+        print(len(li))
+
+    with open(&quot;save_usename_team.csv&quot;, &quot;w&quot;, newline='', encoding = 'utf-8') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow([&quot;title&quot;,'link'])
+        writer.writerows(li)   #写入多行用writerows
+</code></pre>
+<h1 id="主程序">主程序</h1>
+<pre><code class="language-python">if __name__ == '__main__':
+    # getpdfNa(searchkeyNa,'cn','idm')
+    getpdfmdpi(searchkeymdpi)
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[XAFS数据处理]]></title>
+        <id>https://qoclub.site/post/exafs/</id>
+        <link href="https://qoclub.site/post/exafs/">
+        </link>
+        <updated>2022-06-13T14:54:06.000Z</updated>
+        <summary type="html"><![CDATA[<p>搬运Larch用来做扩展边数据处理的代码。</p>
+<ol>
+<li>
+<p>read data from an Athena Project File</p>
+</li>
+<li>
+<p>do XAFS background subtraction with autobk()</p>
+</li>
+<li>
+<p>do XAFS Fourier transform with xfft()<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202206132258763.png" alt="" loading="lazy"></p>
+</li>
+</ol>
+]]></summary>
+        <content type="html"><![CDATA[<p>搬运Larch用来做扩展边数据处理的代码。</p>
+<ol>
+<li>
+<p>read data from an Athena Project File</p>
+</li>
+<li>
+<p>do XAFS background subtraction with autobk()</p>
+</li>
+<li>
+<p>do XAFS Fourier transform with xfft()<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202206132258763.png" alt="" loading="lazy"></p>
+</li>
+</ol>
+<!-- more -->
+<p>For more details, see <a href="https://xraypy.github.io/xraylarch/xafs/">https://xraypy.github.io/xraylarch/xafs/</a></p>
+<h1 id="1-xafs-data-processing">1 XAFS Data Processing</h1>
+<h2 id="11-导入数据">1.1 导入数据</h2>
+<p>We'll start with reading and exploring the Athena Project File:</p>
+<pre><code class="language-{.python}">
+from larch.io import read_athena
+
+project = read_athena('../xafsdata/fe_athena.prj')
+
+</code></pre>
+<pre><code class="language-{.python}">
+print(type(project._athena_groups))
+
+</code></pre>
+<pre><code class="language-{.python}">
+for name, group in project._athena_groups.items(): # 一个字典
+
+print(name, group)
+
+</code></pre>
+<blockquote>
+<p><strong>NOTE</strong> For additional features of working with Athena project files</p>
+</blockquote>
+<blockquote>
+<p>-&gt; <a href="./IO_Athena_project.ipynb">IO_Athena_project.ipynb</a></p>
+</blockquote>
+<blockquote>
+<p>Let's get that data group for Fe2O3 and look at what that Group object contains</p>
+</blockquote>
+<pre><code class="language-{.python}">
+fe2o3 = project.fe2o3_rt1_xmu
+
+for attr in dir(fe2o3): # 获得当前模块的属性列表
+
+print(attr, type(getattr(fe2o3, attr)))
+
+</code></pre>
+<p>There are several components to this Group of data. We note that there are arrays for <code>energy</code> and <code>mu</code>. These are what represent <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi><mo>(</mo><mi>E</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mu(E)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">μ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span></span>.</p>
+<hr>
+<h2 id="12-原始数据查看">1.2 原始数据查看</h2>
+<p>We'll want to plot this data and the other data arrays as we go.</p>
+<pre><code class="language-{.python}">
+import matplotlib.pyplot as plt
+
+plt.plot(fe2o3.energy, fe2o3.mu, label='mu')
+
+plt.xlabel('Energy')
+
+plt.ylabel('mu')
+
+plt.legend()
+
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202206132256785.png" alt="" loading="lazy"></figure>
+<h2 id="13-去除背景">1.3 去除背景</h2>
+<blockquote>
+<p>用 audobk 函数获得 chi (k)</p>
+</blockquote>
+<p>Now let's remove the XAFS background and extract the EXAFS <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>χ</mi><mo>(</mo><mi>k</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\chi(k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">χ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span>. We'll use the<a href="https://xraypy.github.io/xraylarch/xafs/autobk.html"> <code>autobk()</code> function</a></p>
+<p>Note that we pass in the <em>Group</em> as the first argument. The <code>autobk()</code> function will add several attributes to this Group -- it will be the container for this dataset.</p>
+<pre><code class="language-{.python}">
+from larch.xafs import autobk
+
+autobk(fe2o3, rbkg=0.85, kweight=2)
+
+# for attr in dir(fe2o3): # 获得当前模块的属性列表
+
+# print(attr, type(getattr(fe2o3, attr)))
+
+plt.plot(fe2o3.k, fe2o3.chi)
+
+plt.xlabel(r'$k\, ({\rm\AA})^{-1}$')
+
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202206132256174.png" alt="" loading="lazy"></figure>
+<h2 id="14-画出-k2-加权">1.4 画出 k2 加权</h2>
+<pre><code class="language-{.python}">
+plt.plot(fe2o3.k, fe2o3.chi*fe2o3.k**2, label='$\chi$')
+
+plt.xlabel(r'$k\, ({\rm\AA}){-1}$')
+
+plt.ylabel(r'$k^2\chi, ({\rm\AA})^{-2}$')
+
+plt.legend()
+
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202206132257031.png" alt="" loading="lazy"></figure>
+<pre><code class="language-{.python}">
+from larch.wxlib import plotlabels as plab
+
+print(dir(plab))
+
+plt.plot(fe2o3.k, fe2o3.chi*fe2o3.k**2)
+
+plt.xlabel(plab.k)
+
+plt.ylabel(plab.chikw.format(2))
+
+</code></pre>
+<figure data-type="image" tabindex="4"><img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202206132257819.png" alt="" loading="lazy"></figure>
+<h2 id="15-audobk-函数获得背景">1.5 audobk 函数获得背景</h2>
+<pre><code class="language-{.python}">
+plt.plot(fe2o3.energy, fe2o3.mu, label='mu')
+
+# bkg在E0前的值是mu，E0后的值才是bkg
+
+plt.plot(fe2o3.energy, fe2o3.bkg, label='bkg')
+
+plt.xlabel(plab.energy)
+
+plt.ylabel(plab.mu)
+
+plt.legend()
+
+</code></pre>
+<figure data-type="image" tabindex="5"><img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202206132310240.png" alt="" loading="lazy"></figure>
+<h2 id="16-chi-k-做傅里叶变换">1.6 chi (k) 做傅里叶变换</h2>
+<p>and now we will do the Fourier transform from <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>χ</mi><mo>(</mo><mi>k</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\chi(k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">χ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span> to <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>χ</mi><mo>(</mo><mi>R</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\chi(R)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">χ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mclose">)</span></span></span></span>, using the <code>xftf()</code> (XAFS Fourier Transform Forward) function. We'll do the Fourier transform on <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">k^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> weighted <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>χ</mi><mo>(</mo><mi>k</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\chi(k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">χ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span> with a Kaiser-Bessel Window.</p>
+<pre><code class="language-{.python}">
+from larch.xafs import xftf
+
+# 前向傅里叶变换
+
+# kmin和kmax是傅里叶变换的窗口范围，dk是窗口的步长
+
+xftf(fe2o3, kweight=2, kmin=2, kmax=13.0, dk=5, kwindow='Kaiser-Bessel')
+
+</code></pre>
+<pre><code class="language-{.python}">
+plt.plot(fe2o3.k, fe2o3.chi*fe2o3.k**2, label='chi(k)')
+
+plt.plot(fe2o3.k, fe2o3.kwin, label='window')
+
+plt.xlabel(plab.k)
+
+plt.ylabel(plab.chikw.format(2))
+
+plt.legend()
+
+</code></pre>
+<figure data-type="image" tabindex="6"><img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202206132258763.png" alt="" loading="lazy"></figure>
+<pre><code class="language-{.python}">
+plt.plot(fe2o3.r, fe2o3.chir_mag, label='chi(r), mag')
+
+plt.plot(fe2o3.r, fe2o3.chir_re, label='chi(r), real)')
+
+plt.xlabel(plab.r)
+
+plt.ylabel(plab.chir.format(3))
+
+plt.legend()
+
+</code></pre>
+<figure data-type="image" tabindex="7"><img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202206132258333.png" alt="" loading="lazy"></figure>
+<h1 id="2-参考">2 参考</h1>
+<ol>
+<li><a href="https://pubs.geoscienceworld.org/msa/rimg/article/78/1/33/140954/Fundamentals-of-XAFS">Fundamentals of XAFS | Reviews in Mineralogy and Geochemistry | GeoScienceWorld</a></li>
+<li><a href="http://xraypy.github.io/xraylarch/xafs_autobk.html?highlight=autobk#autobk">13.4. XAFS: Post-edge Background Subtraction — xraylarch 0.9.61 documentation</a></li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[爬虫获取通知更新并推送微信]]></title>
+        <id>https://qoclub.site/post/craw/</id>
+        <link href="https://qoclub.site/post/craw/">
+        </link>
+        <updated>2022-06-06T04:42:51.000Z</updated>
+        <summary type="html"><![CDATA[<p>这篇文章介绍如何利用爬虫获取info上更新的办公通知，并推送到微信。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>这篇文章介绍如何利用爬虫获取info上更新的办公通知，并推送到微信。</p>
+<!-- more -->
+<p>效果如图：<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202206061238087.png" alt="" loading="lazy"></p>
+<h1 id="参考">参考</h1>
+<ol>
+<li>server酱：<a href="https://sct.ftqq.com/forward">https://sct.ftqq.com/forward</a></li>
+<li>wecom酱：<a href="https://github.com/easychen/wecomchan">https://github.com/easychen/wecomchan</a></li>
+</ol>
+<h1 id="源代码">源代码</h1>
+<pre><code class="language-python">
+import json,requests,base64,time,requests
+
+from bs4 import BeautifulSoup
+
+  
+
+# 初始化
+
+links = [] # 链接存放在links列表中
+
+contents = [] # 文本存放在contents列表中
+
+qyID  = '' # 您的企业id
+
+appID = '' # 您的app id
+
+appsecret = '' # 您的app secret
+
+url='http://postinfo.tsinghua.edu.cn/f/bangongtongzhi/more' # 爬取的网站
+
+
+
+# 利用企业微信api发送通知
+
+def send_to_wecom(text,wecom_cid,wecom_aid,wecom_secret,wecom_touid='@all'):
+
+    get_token_url = f&quot;https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={wecom_cid}&amp;corpsecret={wecom_secret}&quot;
+
+    response = requests.get(get_token_url).content # 获取网页内容
+
+    access_token = json.loads(response).get('access_token') # 获取access_token
+
+    if access_token and len(access_token) &gt; 0: # 如果获取到access_token
+
+        send_msg_url = f'https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token={access_token}'
+
+        data = {
+
+            &quot;touser&quot;:wecom_touid, # 企业id
+
+            &quot;agentid&quot;:wecom_aid, # 应用id
+
+            &quot;msgtype&quot;:&quot;text&quot;, # 格式为文本
+
+            &quot;text&quot;:{
+
+                &quot;content&quot;:text
+
+            },
+
+            &quot;duplicate_check_interval&quot;:600
+
+        }
+
+        response = requests.post(send_msg_url,data=json.dumps(data)).content # 发送消息
+
+        return response
+
+    else:
+
+        return False
+
+  
+
+# 获取网页内容，并调用企业微信api
+
+def get_content(url):
+
+    print('hello world')
+
+    soups = BeautifulSoup(requests.get(url).content, 'html.parser') # 获取网页内容
+
+    for soup in soups.find_all('a',target='_blank'): # 查找所有的a标签，target='_blank'的
+
+        link = soup.get('href').strip() # 获取a标签中的链接，并去除空格
+
+        content = soup.get_text() # 获取a标签中的文本
+
+        if link[:5] == '/node': # 如果是内部链接，则添加前缀
+
+            link = 'http://postinfo.tsinghua.edu.cn' + link
+
+        if link not in links: # 如果是新的链接，则添加到列表
+
+            links.append(link)
+
+            contents.append(content)
+
+            if len(links) == 10: # 每次启动程序只通知最新的
+
+                print('请查看微信通知')
+
+                send_to_wecom(f'{contents[0]}\n{links[0]}',qyID, appID, appsecret)
+
+            if len(links) &gt; 10:
+
+                print('请查看微信通知')
+
+                send_to_wecom(f'{content}\n{link}',qyID, appID, appsecret)
+
+  
+
+if __name__ == '__main__':
+
+    while True:
+
+        get_content(url)
+
+        time.sleep(1800) # 每半小时执行一次
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[在WSL上做分子动力学——LAMMPS配置指南]]></title>
+        <id>https://qoclub.site/post/lammps/</id>
+        <link href="https://qoclub.site/post/lammps/">
+        </link>
+        <updated>2022-06-04T07:44:33.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1-lammps安装">1 LAMMPS安装<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup><sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></h1>
+<h2 id="11-安装依赖库">1.1 安装依赖库</h2>
+<pre><code class="language-bash">sudo apt install git cmake3 ccache# cmake3是一个编译器，ccache是个编译加速的包
+</code></pre>
+<pre><code class="language-bash">sudo apt install openmpi-bin libfftw3-dev libjpeg-dev libpng-dev ffmpeg gzip libblas-dev liblapack-dev -y # openmpi是一个并行运算的库，libfftw3是做FFT的库，ffmpeg是做视频输出的库，libblas和liblapack是做线性代数运算的库
+</code></pre>
+<h2 id="12-获取源代码">1.2 获取源代码</h2>
+<pre><code class="language-bash">git clone https://github.com/lammps/lammps.git
+</code></pre>
+<h2 id="13-建立build文件夹并在其中构建">1.3 建立build文件夹并在其中构建</h2>
+<pre><code class="language-bash">cd lammps &amp;&amp; mkdir build &amp;&amp; cd build  
+</code></pre>
+<h2 id="14-编译参数配置">1.4 编译参数配置</h2>
+<blockquote>
+<p>这一步实际上是修改CMakeCache.txt文件，可以直接在里边修改。具体<a href="https://docs.lammps.org/Build_basics.html">官方说明3.4-3.6</a>。</p>
+</blockquote>
+<pre><code class="language-bash">cmake -D BUILD_SHARED_LIBS=yes -D LAMMPS_EXCEPTIONS=yes -D PKG_PYTHON=yes -D PKG_KSPACE=yes -D BUILD_OMP=yes  ../cmake/  
+# -D CMAKE_INSTALL_PREFIX=&lt;某个路径&gt;表示指定安装目录
+</code></pre>
+<p>如果后期要用某个势，需要参考官方库（这里不讲从文献获取）→<a href="https://docs.lammps.org/Packages_list.html"> Available Packages</a>，然后重新修正构建参数来构建，如加上多体包：<code>-D PKG_MANYBODY=yes</code></p>
+<h2 id="15-编译和安装">1.5 编译和安装</h2>
+<pre><code class="language-bash"># 并行编译  
+cmake -j9 --build .   # 如果你的CPU有N个核心，就用-j(N+1)
+# 安装  
+sudo cmake --install .
+</code></pre>
+<h2 id="16-设置环境变量">1.6 设置环境变量</h2>
+<p>进入.bashrc，在最后添加上以下内容</p>
+<pre><code class="language-bash">export LAMMPS_HOME=/home/linqy/lammps
+export PATH=$LAMMPS_HOME/build:$PATH
+export LD_LIBRARY_PATH=$LAMMPS_HOME/lib:$LD_LIBRARY_PATH
+# 官方说明是export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH
+export OMP_NUM_THREADS=4 # 如果并行运行，则用4个线程
+</code></pre>
+<h2 id="17-测试">1.7 测试</h2>
+<p>进入bench目录，输入</p>
+<pre><code class="language-bash">lmp -in in.lj
+</code></pre>
+<h1 id="2-python配置">2 Python配置</h1>
+<p>运行python脚本</p>
+<pre><code class="language-python">import lammps
+lmp = lammps.lammps()
+</code></pre>
+<p>如果出现问题，可能要到python文件夹，运行</p>
+<pre><code class="language-bash">sudo python3 setup.py install
+</code></pre>
+<p>如果要并行运算，需要mpi4py</p>
+<pre><code class="language-bash">pip install --user mpi4py
+</code></pre>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://yuhldr.github.io/posts/320.html">Linux系统源码编译安装LAMMPS</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p><a href="https://docs.lammps.org/Build_cmake.html">Build LAMMPS with CMake — LAMMPS documentation</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p><a href="https://docs.lammps.org/Howto_wsl.html">在带有 WSL 的 Windows 10 上使用 LAMMPS — LAMMPS 文档</a> <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux学习]]></title>
+        <id>https://qoclub.site/post/linux/</id>
+        <link href="https://qoclub.site/post/linux/">
+        </link>
+        <updated>2022-06-04T06:23:52.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="linux学习">Linux学习</h1>
+<ol>
+<li><a href="https://tools.iculture.cc/linux_command/">linux命令查询</a></li>
+<li><a href="https://juejin.cn/post/6938385978004340744">常见linux命令</a></li>
+<li><a href="https://itsfoss.com/">itsfoss博客</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL">Youtube大胡子 Linux for Hackers</a></li>
+<li><a href="https://linuxjourney.com/">Home | Linux Journey</a></li>
+<li><a href="https://bbs.huaweicloud.com/blogs/300285">linux常见命令</a></li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ASE+GPAW结构弛豫代码示例]]></title>
+        <id>https://qoclub.site/post/gpaw/</id>
+        <link href="https://qoclub.site/post/gpaw/">
+        </link>
+        <updated>2022-06-04T05:09:16.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1-导入需要的库和cif文件">1 导入需要的库和cif文件</h1>
+<pre><code class="language-python">from ase import Atoms
+import ase
+from ase.build import add_adsorbate
+from ase.visualize import view
+from ase.constraints import FixAtoms
+from ase.optimize import LBFGS, QuasiNewton, FIRE
+from ase.io import write,read
+from gpaw import GPAW, PW
+from ase.calculators.dftd3 import DFTD3
+import numpy as np
+from ase.neb import NEB
+import matplotlib.pyplot as plt
+from ase.optimize.sciopt import SciPyFminCG
+
+slab = read('Ni.cif') # from the article
+view(slab )
+# Find the initial and final states for the reaction.
+Mg2S2 = Atoms('Mg2S2',[[0,0,0],[3.7,0,0],[1.85,1.85,0],[1.85,-1.85,0]]) # Mg2S2 from Materials Project 
+# slab.set_pbc((1, 1, 1)) # Set periodic boundary conditions. (1,1,0) means periodic in x and y, but not in z.
+add_adsorbate(slab,Mg2S2,height=4.0,position=(2.383, 5.455)) # height means the distance between the adsorbate and the surface. position means the x-y position of the adsorbate, 'fcc' means the position of the (0,0,0) with shift to fcc postion
+# slab.center(vacuum=10, axis=2) # set a 20 A vacuum along the z-axis
+view(slab)
+</code></pre>
+<h1 id="2-开始计算">2 开始计算</h1>
+<pre><code class="language-python">slab.calc = GPAW(xc='PBE', mode=PW(340))
+relax = QuasiNewton(slab) # Structure optimization using the QuasiNewton method (BFGSLineSearch)
+relax.run()
+</code></pre>
+<h1 id="3-查看计算结果并保存">3 查看计算结果并保存</h1>
+<pre><code class="language-python">view(slab)
+write('NiRelaxed.cif', slab)
+write('NiRelaxed.traj', slab)
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[过渡态搜索算法CI-NEB代码示例]]></title>
+        <id>https://qoclub.site/post/ci-neb/</id>
+        <link href="https://qoclub.site/post/ci-neb/">
+        </link>
+        <updated>2022-06-04T05:05:00.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1-初始化">1 初始化</h1>
+<pre><code class="language-python">from ase import Atoms
+from ase.build import add_adsorbate
+from ase.visualize import view
+from ase.constraints import FixAtoms
+from ase.optimize import QuasiNewton
+from ase.io import write,read
+from ase.calculators.emt import EMT
+from gpaw import GPAW, PW
+from ase.calculators.dftd3 import DFTD3 # van der Waals 
+import numpy as np
+from ase.neb import NEB
+import matplotlib.pyplot as plt
+from ase.optimize.sciopt import SciPyFminCG # conjugate gradient
+
+# Find the initial and final states for the reaction.
+Mg2S2 = Atoms('Mg2S2',[[0,0,0],[3.7,0,0],[1.85,1.85,0],[1.85,-1.85,0]]) # Mg2S2 from Materials Project
+# Set up a (4 x 4) two layer slab of Cu: 
+slab = read('BiN4.cif') # BiN4 from the article
+# slab.set_pbc((1, 1, 1)) # Set periodic boundary conditions. (1,1,0) means periodic in x and y, but not in z.
+add_adsorbate(slab,Mg2S2,height=4.0,position=(2.383, 5.455)) # height means the distance between the adsorbate and the surface. position means the x-y position of the adsorbate, 'fcc' means the position of the (0,0,0) with shift to fcc postion
+# slab.center(vacuum=10, axis=2) # set a 20 A vacuum along the z-axis
+view(slab)
+</code></pre>
+<h2 id="11-优化初始结构">1.1 优化初始结构</h2>
+<pre><code class="language-python"># The forces of the atoms are the dE/dx of the atoms.
+# default ecut of PW is 340 eV
+mask = [atom.symbol == 'C' for atom in slab]
+slab.set_constraint(FixAtoms(mask=mask))
+slab.calc = GPAW(xc='PBE', mode=PW(400)) # default kpts is only the gamma point.
+# Relax the structure
+relax = QuasiNewton(slab) # Structure optimization using the QuasiNewton method (BFGSLineSearch)
+relax.run(fmax=0.05) # fmax is the maximum force = 0.05 eV/Ang
+view(slab)
+write('N2.traj',slab)
+</code></pre>
+<h2 id="12-优化最终结构">1.2 优化最终结构</h2>
+<pre><code class="language-python"># Now the final state.
+# Move the second N atom to a neighboring hollow site:
+# slab[-1].position[0] means the x-coordinate of the last N atom
+# slab[-1].position[1] means the y-coordinate of the last N atom
+# slab.cell[0, 0] means the x-dimension of the slab
+slab[-1].position[0] = slab[-2].position[0] + 0.25 * slab.cell[0, 0] # shift N atom to the right by 0.25 times the x-dimension of the slab
+slab[-1].position[1] = slab[-2].position[1]
+# and relax.
+relax.run()
+view(slab)
+write('2N.traj', slab)
+</code></pre>
+<h1 id="2-初始化路径图像">2 初始化路径图像</h1>
+<pre><code class="language-python"># Read the previous configurations
+initial = read('N2.traj')
+final = read('2N.traj')
+
+#  Make 9 images (note the use of copy)
+configs = [initial.copy() for i in range(8)] + [final] # 8 of initial and 1 of final images
+
+# As before, fix the Cu atoms
+constraint = FixAtoms(mask=[atom.symbol != 'N' for atom in initial])
+for config in configs:
+    config.calc = EMT() # config the calculator of every image, only the internal images (not the endpoints) need have calculators attached.
+    config.set_constraint(constraint) # set the constraint of every image
+</code></pre>
+<h1 id="3-用neb法进行优化求解">3 用NEB法进行优化求解</h1>
+<pre><code class="language-python"># Make the NEB object, interpolate to guess the intermediate steps
+band = NEB(configs)
+band.interpolate() # linear interpolation
+relax = QuasiNewton(band, trajectory='N2Cu.traj') # Structure optimization using the QuasiNewton method (FIRE)
+# Do the calculation
+relax.run() # default fmax=0.05
+</code></pre>
+<h1 id="4-绘制路径图像">4 绘制路径图像</h1>
+<pre><code class="language-python">e0 = initial.get_potential_energy()
+E = [config.get_potential_energy() - e0 for config in configs]
+plt.plot(E)
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RSS订阅指南]]></title>
+        <id>https://qoclub.site/post/RSS/</id>
+        <link href="https://qoclub.site/post/RSS/">
+        </link>
+        <updated>2022-06-01T01:23:28.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1-inoreader订阅">1 Inoreader订阅</h1>
+<ol>
+<li>进入<a href="https://www.inoreader.com/">https://www.inoreader.com/</a>注册账号（需要fanqiang），如果不能fan请尝试其他RSS订阅平台，直接跳到第4步。</li>
+<li>点击新增订阅源Add new – Feed</li>
+</ol>
+<figure data-type="image" tabindex="1"><img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202206041655760.png" alt="" loading="lazy"></figure>
+<ol start="3">
+<li>
+<p>输入感兴趣的订阅源<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202206041655955.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>有些感兴趣的网站可能找不到，比如说某个课题组的官网，可以找我帮助建立。我创建了以下几个老师的课题组订阅链接，把<strong>链接复制到第3步中的输入框即可订阅</strong>。</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>夏川-电子科大：https://feed43.com/3447567116042854.xml</p>
+</li>
+<li>
+<p>曾杰-中科大：https://feed43.com/5130331480728130.xml</p>
+</li>
+<li>
+<p>张亮-苏大：https://feed43.com/3544816118854827.xml</p>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>也可以通过Chrome的RSSHub插件和油猴的RSS+脚本查找，如果找不到可以通过https://feed43.com/创建（需要略懂html语言）</p>
+</blockquote>
+]]></content>
+    </entry>
+</feed>

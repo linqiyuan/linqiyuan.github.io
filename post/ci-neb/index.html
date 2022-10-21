@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://qoclub.site/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="唯有真诚打动人"><meta charset="UTF-8"><title>过渡态搜索算法CI-NEB代码示例 | 可乐不加冰🥤</title>
+<link href="https://qoclub.site/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://qoclub.site/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+<link rel="canonical" href="https://qoclub.site/post/ci-neb/" />
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://qoclub.site"><img alt="logo" style="display:inline-block;" src="https://qoclub.site/images/avatar.png"/></a><h1 title="可乐不加冰🥤" class="weaklink"><a  href="/">可乐不加冰🥤</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >🏠️主页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/math" class="selected active current nav__item" >数学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/phy" class="selected active current nav__item" >物理</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/Chem" class="selected active current nav__item" >化学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/compute" class="selected active current nav__item" >计算</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/recommand" class="selected active current nav__item" >推荐</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >🏠️主页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/math" class="selected active current nav__item" >数学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/phy" class="selected active current nav__item" >物理</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/Chem" class="selected active current nav__item" >化学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/compute" class="selected active current nav__item" >计算</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/recommand" class="selected active current nav__item" >推荐</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1666370266414" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>过渡态搜索算法CI-NEB代码示例</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2022-06-04</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://qoclub.site/tag/tQ59rxFmH/" class="tag">计算</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">570字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">4 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<h1 id="1-初始化">1 初始化</h1>
+<pre><code class="language-python">from ase import Atoms
+from ase.build import add_adsorbate
+from ase.visualize import view
+from ase.constraints import FixAtoms
+from ase.optimize import QuasiNewton
+from ase.io import write,read
+from ase.calculators.emt import EMT
+from gpaw import GPAW, PW
+from ase.calculators.dftd3 import DFTD3 # van der Waals 
+import numpy as np
+from ase.neb import NEB
+import matplotlib.pyplot as plt
+from ase.optimize.sciopt import SciPyFminCG # conjugate gradient
+
+# Find the initial and final states for the reaction.
+Mg2S2 = Atoms('Mg2S2',[[0,0,0],[3.7,0,0],[1.85,1.85,0],[1.85,-1.85,0]]) # Mg2S2 from Materials Project
+# Set up a (4 x 4) two layer slab of Cu: 
+slab = read('BiN4.cif') # BiN4 from the article
+# slab.set_pbc((1, 1, 1)) # Set periodic boundary conditions. (1,1,0) means periodic in x and y, but not in z.
+add_adsorbate(slab,Mg2S2,height=4.0,position=(2.383, 5.455)) # height means the distance between the adsorbate and the surface. position means the x-y position of the adsorbate, 'fcc' means the position of the (0,0,0) with shift to fcc postion
+# slab.center(vacuum=10, axis=2) # set a 20 A vacuum along the z-axis
+view(slab)
+</code></pre>
+<h2 id="11-优化初始结构">1.1 优化初始结构</h2>
+<pre><code class="language-python"># The forces of the atoms are the dE/dx of the atoms.
+# default ecut of PW is 340 eV
+mask = [atom.symbol == 'C' for atom in slab]
+slab.set_constraint(FixAtoms(mask=mask))
+slab.calc = GPAW(xc='PBE', mode=PW(400)) # default kpts is only the gamma point.
+# Relax the structure
+relax = QuasiNewton(slab) # Structure optimization using the QuasiNewton method (BFGSLineSearch)
+relax.run(fmax=0.05) # fmax is the maximum force = 0.05 eV/Ang
+view(slab)
+write('N2.traj',slab)
+</code></pre>
+<h2 id="12-优化最终结构">1.2 优化最终结构</h2>
+<pre><code class="language-python"># Now the final state.
+# Move the second N atom to a neighboring hollow site:
+# slab[-1].position[0] means the x-coordinate of the last N atom
+# slab[-1].position[1] means the y-coordinate of the last N atom
+# slab.cell[0, 0] means the x-dimension of the slab
+slab[-1].position[0] = slab[-2].position[0] + 0.25 * slab.cell[0, 0] # shift N atom to the right by 0.25 times the x-dimension of the slab
+slab[-1].position[1] = slab[-2].position[1]
+# and relax.
+relax.run()
+view(slab)
+write('2N.traj', slab)
+</code></pre>
+<h1 id="2-初始化路径图像">2 初始化路径图像</h1>
+<pre><code class="language-python"># Read the previous configurations
+initial = read('N2.traj')
+final = read('2N.traj')
+
+#  Make 9 images (note the use of copy)
+configs = [initial.copy() for i in range(8)] + [final] # 8 of initial and 1 of final images
+
+# As before, fix the Cu atoms
+constraint = FixAtoms(mask=[atom.symbol != 'N' for atom in initial])
+for config in configs:
+    config.calc = EMT() # config the calculator of every image, only the internal images (not the endpoints) need have calculators attached.
+    config.set_constraint(constraint) # set the constraint of every image
+</code></pre>
+<h1 id="3-用neb法进行优化求解">3 用NEB法进行优化求解</h1>
+<pre><code class="language-python"># Make the NEB object, interpolate to guess the intermediate steps
+band = NEB(configs)
+band.interpolate() # linear interpolation
+relax = QuasiNewton(band, trajectory='N2Cu.traj') # Structure optimization using the QuasiNewton method (FIRE)
+# Do the calculation
+relax.run() # default fmax=0.05
+</code></pre>
+<h1 id="4-绘制路径图像">4 绘制路径图像</h1>
+<pre><code class="language-python">e0 = initial.get_potential_energy()
+E = [config.get_potential_energy() - e0 for config in configs]
+plt.plot(E)
+</code></pre>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#1-%E5%88%9D%E5%A7%8B%E5%8C%96">1 初始化</a>
+<ul>
+<li><a href="#11-%E4%BC%98%E5%8C%96%E5%88%9D%E5%A7%8B%E7%BB%93%E6%9E%84">1.1 优化初始结构</a></li>
+<li><a href="#12-%E4%BC%98%E5%8C%96%E6%9C%80%E7%BB%88%E7%BB%93%E6%9E%84">1.2 优化最终结构</a></li>
+</ul>
+</li>
+<li><a href="#2-%E5%88%9D%E5%A7%8B%E5%8C%96%E8%B7%AF%E5%BE%84%E5%9B%BE%E5%83%8F">2 初始化路径图像</a></li>
+<li><a href="#3-%E7%94%A8neb%E6%B3%95%E8%BF%9B%E8%A1%8C%E4%BC%98%E5%8C%96%E6%B1%82%E8%A7%A3">3 用NEB法进行优化求解</a></li>
+<li><a href="#4-%E7%BB%98%E5%88%B6%E8%B7%AF%E5%BE%84%E5%9B%BE%E5%83%8F">4 绘制路径图像</a></li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+</script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"><a href="mailto:linqiyuan2016@gmail.com"title="envelope"><i class="iconfont icon-envelope"></i></a><a href="https://qoclub.site/atom.xml"title="rss"><i class="iconfont icon-rss"></i></a></div></div><div class="copyright"id="copyright"><!--<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	<span id="busuanzi_container_site_uv" style='display:none'>访客数<span id="busuanzi_value_site_uv"></span>次          &nbsp;              
+ </span>
+	<span id="busuanzi_container_site_pv" style='display:none'>访问量<span id="busuanzi_value_site_pv"></span>次</span>
+</div>-->Copyright © 2018-2022 <a href="https://qoclub.site" style="margin:0;">可乐不加冰🥤</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>37</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script type="text/javascript" async src="https://qoclub.site/media/js/prism.js"></script>
+</body>
+</html>

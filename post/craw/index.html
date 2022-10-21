@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://qoclub.site/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="唯有真诚打动人"><meta charset="UTF-8"><title>爬虫获取通知更新并推送微信 | 可乐不加冰🥤</title>
+<link href="https://qoclub.site/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://qoclub.site/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+<link rel="canonical" href="https://qoclub.site/post/craw/" />
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://qoclub.site"><img alt="logo" style="display:inline-block;" src="https://qoclub.site/images/avatar.png"/></a><h1 title="可乐不加冰🥤" class="weaklink"><a  href="/">可乐不加冰🥤</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >🏠️主页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/math" class="selected active current nav__item" >数学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/phy" class="selected active current nav__item" >物理</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/Chem" class="selected active current nav__item" >化学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/compute" class="selected active current nav__item" >计算</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/recommand" class="selected active current nav__item" >推荐</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >🏠️主页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/math" class="selected active current nav__item" >数学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/phy" class="selected active current nav__item" >物理</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/Chem" class="selected active current nav__item" >化学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/compute" class="selected active current nav__item" >计算</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/recommand" class="selected active current nav__item" >推荐</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1666370266414" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>爬虫获取通知更新并推送微信</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2022-06-06</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://qoclub.site/tag/N2dVHJDzo/" class="tag">电子信息</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">456字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">3 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<p>这篇文章介绍如何利用爬虫获取info上更新的办公通知，并推送到微信。</p>
+<!-- more -->
+<p>效果如图：<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202206061238087.png" alt="" loading="lazy"></p>
+<h1 id="参考">参考</h1>
+<ol>
+<li>server酱：<a href="https://sct.ftqq.com/forward">https://sct.ftqq.com/forward</a></li>
+<li>wecom酱：<a href="https://github.com/easychen/wecomchan">https://github.com/easychen/wecomchan</a></li>
+</ol>
+<h1 id="源代码">源代码</h1>
+<pre><code class="language-python">
+import json,requests,base64,time,requests
+
+from bs4 import BeautifulSoup
+
+  
+
+# 初始化
+
+links = [] # 链接存放在links列表中
+
+contents = [] # 文本存放在contents列表中
+
+qyID  = '' # 您的企业id
+
+appID = '' # 您的app id
+
+appsecret = '' # 您的app secret
+
+url='http://postinfo.tsinghua.edu.cn/f/bangongtongzhi/more' # 爬取的网站
+
+
+
+# 利用企业微信api发送通知
+
+def send_to_wecom(text,wecom_cid,wecom_aid,wecom_secret,wecom_touid='@all'):
+
+    get_token_url = f&quot;https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={wecom_cid}&amp;corpsecret={wecom_secret}&quot;
+
+    response = requests.get(get_token_url).content # 获取网页内容
+
+    access_token = json.loads(response).get('access_token') # 获取access_token
+
+    if access_token and len(access_token) &gt; 0: # 如果获取到access_token
+
+        send_msg_url = f'https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token={access_token}'
+
+        data = {
+
+            &quot;touser&quot;:wecom_touid, # 企业id
+
+            &quot;agentid&quot;:wecom_aid, # 应用id
+
+            &quot;msgtype&quot;:&quot;text&quot;, # 格式为文本
+
+            &quot;text&quot;:{
+
+                &quot;content&quot;:text
+
+            },
+
+            &quot;duplicate_check_interval&quot;:600
+
+        }
+
+        response = requests.post(send_msg_url,data=json.dumps(data)).content # 发送消息
+
+        return response
+
+    else:
+
+        return False
+
+  
+
+# 获取网页内容，并调用企业微信api
+
+def get_content(url):
+
+    print('hello world')
+
+    soups = BeautifulSoup(requests.get(url).content, 'html.parser') # 获取网页内容
+
+    for soup in soups.find_all('a',target='_blank'): # 查找所有的a标签，target='_blank'的
+
+        link = soup.get('href').strip() # 获取a标签中的链接，并去除空格
+
+        content = soup.get_text() # 获取a标签中的文本
+
+        if link[:5] == '/node': # 如果是内部链接，则添加前缀
+
+            link = 'http://postinfo.tsinghua.edu.cn' + link
+
+        if link not in links: # 如果是新的链接，则添加到列表
+
+            links.append(link)
+
+            contents.append(content)
+
+            if len(links) == 10: # 每次启动程序只通知最新的
+
+                print('请查看微信通知')
+
+                send_to_wecom(f'{contents[0]}\n{links[0]}',qyID, appID, appsecret)
+
+            if len(links) &gt; 10:
+
+                print('请查看微信通知')
+
+                send_to_wecom(f'{content}\n{link}',qyID, appID, appsecret)
+
+  
+
+if __name__ == '__main__':
+
+    while True:
+
+        get_content(url)
+
+        time.sleep(1800) # 每半小时执行一次
+</code></pre>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+<li><a href="#%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a></li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+</script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"><a href="mailto:linqiyuan2016@gmail.com"title="envelope"><i class="iconfont icon-envelope"></i></a><a href="https://qoclub.site/atom.xml"title="rss"><i class="iconfont icon-rss"></i></a></div></div><div class="copyright"id="copyright"><!--<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	<span id="busuanzi_container_site_uv" style='display:none'>访客数<span id="busuanzi_value_site_uv"></span>次          &nbsp;              
+ </span>
+	<span id="busuanzi_container_site_pv" style='display:none'>访问量<span id="busuanzi_value_site_pv"></span>次</span>
+</div>-->Copyright © 2018-2022 <a href="https://qoclub.site" style="margin:0;">可乐不加冰🥤</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>37</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script type="text/javascript" async src="https://qoclub.site/media/js/prism.js"></script>
+</body>
+</html>

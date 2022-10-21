@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://qoclub.site/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="唯有真诚打动人"><meta charset="UTF-8"><title>在WSL做DFT计算——ASE+GPAW配置指南 | 可乐不加冰🥤</title>
+<link href="https://qoclub.site/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://qoclub.site/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+<link rel="canonical" href="https://qoclub.site/post/dft/" />
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://qoclub.site"><img alt="logo" style="display:inline-block;" src="https://qoclub.site/images/avatar.png"/></a><h1 title="可乐不加冰🥤" class="weaklink"><a  href="/">可乐不加冰🥤</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >🏠️主页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/math" class="selected active current nav__item" >数学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/phy" class="selected active current nav__item" >物理</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/Chem" class="selected active current nav__item" >化学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/compute" class="selected active current nav__item" >计算</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/recommand" class="selected active current nav__item" >推荐</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >🏠️主页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/math" class="selected active current nav__item" >数学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/phy" class="selected active current nav__item" >物理</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/Chem" class="selected active current nav__item" >化学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/compute" class="selected active current nav__item" >计算</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/recommand" class="selected active current nav__item" >推荐</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1666370266414" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>在WSL做DFT计算——ASE+GPAW配置指南</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2022-05-26</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://qoclub.site/tag/tQ59rxFmH/" class="tag">计算</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">852字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">4 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<h1 id="1-gpaw配置">1 GPAW配置</h1>
+<p><a href="https://wiki.fysik.dtu.dk/gpaw/">gpaw</a>是使用python写的做第一性原理计算的包。GPAW 基于原子模拟环境 (ASE) 和投影增强波 (PAW) 方法。通过实空间均匀网格、多重网格方法和有限差分逼近 (FD)、原子中心基函数 (LCAO) 和平面波 (PW) 来实现对波函数的描述。GPAW 计算通过以 Python 编程语言编写的脚本进行控制。GPAW 依赖于处理分子动力学、分析、可视化、几何优化等的原子模拟环境 (ASE)。</p>
+<p><a href="https://wiki.fysik.dtu.dk/ase/">ASE</a>/GPAW 可以集成并且可以灵活地与 Python 一起使用。ASE 是一款功能非常强大的软件，能够使用 GPAW 和 PW、FD、LCAO、Exact-exchange 模式提供了极大的灵活性。并且加上使用 ASE+ASAP+OpenKIM 原子间势作为几何预优化，它与 ATK 程序所需的功能非常相似。</p>
+<p><a href="https://www.lrgresearch.org/gpaw-tools/about/">gpaw-tools</a>提供可视化功能。</p>
+<h2 id="11-linux子系统安装">1.1 Linux子系统安装</h2>
+<ol>
+<li>在桌面搜索框搜索<strong>windows功能</strong>，启用适合于<strong>Linux的windows子系统</strong>。<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202205260021813.png" alt="" loading="lazy"></li>
+<li>在桌面搜索框搜索<strong>store</strong>，搜索<strong>ubuntu</strong>，点击下载安装。<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202205252150535.png" alt="" loading="lazy"></li>
+<li>详细教程可参考<a href="https://cloud.tencent.com/developer/article/1617342">https://cloud.tencent.com/developer/article/1617342</a></li>
+</ol>
+<h2 id="12-vscode连接到linux">1.2 Vscode连接到Linux</h2>
+<h3 id="121-插件安装">1.2.1 插件安装</h3>
+<p>在Vscode的插件商店搜索<strong>Remote Development</strong>，一次性安装3个远程控制插件。</p>
+<h3 id="122-远程连接">1.2.2 远程连接</h3>
+<ol>
+<li>在Vscode按<code>ctrl + shift + P</code>进入面板，输入<code>Remote-wsl</code>，选择<code>New WSL Window</code><br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202205252157223.png" alt="" loading="lazy"></li>
+<li>打开文件夹<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202205252202749.png" alt="" loading="lazy"></li>
+<li>输入文件夹名称为<code>/</code>，这样可以管理Linux子系统的所有文件<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202205252202870.png" alt="" loading="lazy"></li>
+<li>完成后如图所示<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202205252204926.png" alt="" loading="lazy"></li>
+</ol>
+<h2 id="13-配置文件">1.3 配置文件</h2>
+<h3 id="131-打开终端">1.3.1 打开终端</h3>
+<ol>
+<li>
+<p>点击新建终端<br>
+<img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202205252206378.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>配置网络，依次在终端输入</p>
+</li>
+</ol>
+<blockquote>
+<p>原因是自带的DNS不行，所以把解析器<code>resolv</code>给修改成谷歌的DNS。</p>
+</blockquote>
+<pre><code>sudo rm /etc/resolv.conf 
+sudo bash -c 'echo &quot;nameserver 8.8.8.8&quot; &gt; /etc/resolv.conf'
+sudo bash -c 'echo &quot;[network]&quot; &gt; /etc/wsl.conf'
+sudo bash -c 'echo &quot;generateResolvConf = false&quot; &gt;&gt; /etc/wsl.conf'
+sudo chattr +i /etc/resolv.conf 
+</code></pre>
+<h2 id="14-修改sourceslist">1.4 修改sources.list</h2>
+<blockquote>
+<p>原因是执行apt的时候用自带的总是下载不了，所以需要改用清华源。</p>
+</blockquote>
+<ol>
+<li>复制清华源的链接</li>
+</ol>
+<pre><code># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+</code></pre>
+<ol start="2">
+<li>用vim编辑</li>
+</ol>
+<pre><code>sudo vim /etc/apt/sources.list
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://picgo-11.oss-cn-beijing.aliyuncs.com/img/202205252213241.png" alt="" loading="lazy"></figure>
+<ul>
+<li>在Vim中，按<code>gg</code>将光标定位到行首，然后按<code>dG</code>删除全部。</li>
+<li>然后按<code>a</code>进入编辑模式，点击<code>鼠标右键</code>复制，然后按<code>esc</code>退出。</li>
+<li>按<code>:wq</code>保存并退出vim。</li>
+<li>在终端执行</li>
+</ul>
+<pre><code>sudo apt update
+</code></pre>
+<h2 id="15-gpaw软件包安装">1.5 gpaw软件包安装</h2>
+<ol>
+<li>依次执行</li>
+</ol>
+<pre><code>sudo apt install python3-pip
+sudo apt install libxc-dev
+sudo apt install gfortran
+sudo apt install libopenblas-dev
+sudo apt install python3-tk
+pip install gpaw ase
+
+</code></pre>
+<ol start="2">
+<li>设置PATH，在终端执行</li>
+</ol>
+<pre><code>export PATH=/home/用户名/.local/bin:$PATH
+</code></pre>
+<p>把其中的<code>用户名</code>改为安装linux子系统时设置的用户名。如</p>
+<pre><code>export PATH=/home/linqy/.local/bin:$PATH
+</code></pre>
+<ol start="3">
+<li>在终端执行以测试</li>
+</ol>
+<pre><code>gpaw --version
+</code></pre>
+<blockquote>
+<p>推荐参考：<a href="https://www.lrgresearch.org/gpaw-tools/installation/">https://www.lrgresearch.org/gpaw-tools/installation/</a></p>
+</blockquote>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#1-gpaw%E9%85%8D%E7%BD%AE">1 GPAW配置</a>
+<ul>
+<li><a href="#11-linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85">1.1 Linux子系统安装</a></li>
+<li><a href="#12-vscode%E8%BF%9E%E6%8E%A5%E5%88%B0linux">1.2 Vscode连接到Linux</a>
+<ul>
+<li><a href="#121-%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85">1.2.1 插件安装</a></li>
+<li><a href="#122-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5">1.2.2 远程连接</a></li>
+</ul>
+</li>
+<li><a href="#13-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">1.3 配置文件</a>
+<ul>
+<li><a href="#131-%E6%89%93%E5%BC%80%E7%BB%88%E7%AB%AF">1.3.1 打开终端</a></li>
+</ul>
+</li>
+<li><a href="#14-%E4%BF%AE%E6%94%B9sourceslist">1.4 修改sources.list</a></li>
+<li><a href="#15-gpaw%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%AE%89%E8%A3%85">1.5 gpaw软件包安装</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+</script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"><a href="mailto:linqiyuan2016@gmail.com"title="envelope"><i class="iconfont icon-envelope"></i></a><a href="https://qoclub.site/atom.xml"title="rss"><i class="iconfont icon-rss"></i></a></div></div><div class="copyright"id="copyright"><!--<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	<span id="busuanzi_container_site_uv" style='display:none'>访客数<span id="busuanzi_value_site_uv"></span>次          &nbsp;              
+ </span>
+	<span id="busuanzi_container_site_pv" style='display:none'>访问量<span id="busuanzi_value_site_pv"></span>次</span>
+</div>-->Copyright © 2018-2022 <a href="https://qoclub.site" style="margin:0;">可乐不加冰🥤</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>37</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script type="text/javascript" async src="https://qoclub.site/media/js/prism.js"></script>
+</body>
+</html>

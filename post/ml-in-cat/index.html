@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://qoclub.site/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="唯有真诚打动人"><meta charset="UTF-8"><title>催化中的机器学习 | 可乐不加冰🥤</title>
+<link href="https://qoclub.site/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://qoclub.site/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+<link rel="canonical" href="https://qoclub.site/post/ml-in-cat/" />
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://qoclub.site"><img alt="logo" style="display:inline-block;" src="https://qoclub.site/images/avatar.png"/></a><h1 title="可乐不加冰🥤" class="weaklink"><a  href="/">可乐不加冰🥤</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >🏠️主页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/math" class="selected active current nav__item" >数学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/phy" class="selected active current nav__item" >物理</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/Chem" class="selected active current nav__item" >化学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/compute" class="selected active current nav__item" >计算</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/recommand" class="selected active current nav__item" >推荐</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >🏠️主页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/math" class="selected active current nav__item" >数学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/phy" class="selected active current nav__item" >物理</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/Chem" class="selected active current nav__item" >化学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/compute" class="selected active current nav__item" >计算</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/recommand" class="selected active current nav__item" >推荐</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1666370266414" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>催化中的机器学习</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2022-06-04</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://qoclub.site/tag/tQ59rxFmH/" class="tag">计算</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">1476字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">9 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<blockquote>
+<p>参考：<a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cctc.202000234">A Primer about Machine Learning in Catalysis – A Tutorial with Code - Palkovits - 2020 - ChemCatChem - Wiley Online Library</a></p>
+</blockquote>
+<h1 id="1-导入数据库">1 导入数据库</h1>
+<pre><code class="language-python">from xml.dom.minidom import Element
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+from soupsieve import select
+import sklearn as sk
+import tensorflow as tf
+from sklearn.cluster import KMeans
+from sklearn.decomposition import PCA
+from sklearn.manifold import TSNE
+pd.set_option('display.max_columns', 5)
+url = 'https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-019-08325-8/MediaObjects/41467_2019_8325_MOESM3_ESM.xls'
+raw_data = pd.read_excel(url,sheet_name='OCM_Dataset_corrected')
+</code></pre>
+<h1 id="2-读取数据">2 读取数据</h1>
+<pre><code class="language-python">cation1=raw_data.pivot(columns='Cation 1', values='Cation 1 mol%')
+cation2=raw_data.pivot( columns='Cation 2' ,values='Cation 2 mol%' )
+cation3=raw_data.pivot(columns='Cation 3' , values= 'Cation 3 mol%')
+cation4 = raw_data.pivot(columns='Cation 4',values='Cation 4 mol%')
+anion1=raw_data.pivot(columns ='Anion 1' , values= 'Anion 1 mol%')
+anion2 = raw_data.pivot(columns = 'Anion 2' , values= 'Anion 2 mol%')
+support1=raw_data.pivot(columns ='Support 1' , values= 'Support 1 mol%')
+support2 = raw_data.pivot(columns= 'Support 2' , values= 'Support 2 mol%' )
+</code></pre>
+<h1 id="3-数据处理">3 数据处理</h1>
+<pre><code class="language-python">pivot_lists = [cation1,cation2,cation3,cation4,anion1,anion2,support1,support2]
+</code></pre>
+<pre><code class="language-python">concat_pivot_lists = pd.concat(pivot_lists,axis=1,sort=True)
+</code></pre>
+<pre><code class="language-python">composition = concat_pivot_lists.groupby(level=0,axis=1).sum()/100
+</code></pre>
+<pre><code class="language-python">pub_nr = raw_data.iloc[:,1]
+reaction_data = raw_data.iloc[:,19:]
+</code></pre>
+<pre><code class="language-python">clean_list = [pub_nr,composition,reaction_data]
+data_cleaned = pd.concat(clean_list,axis=1,sort=True)
+</code></pre>
+<pre><code class="language-python">print(composition.mean(axis=0).sort_values(ascending=False).head(18).keys())
+</code></pre>
+<pre><code class="language-python">count = 1
+for i in composition.mean(axis=0).sort_values(ascending=False).head(9).keys():
+    plt.subplot(3,3,count)
+    plt.scatter(data_cleaned[i],data_cleaned['S(C2), %'])
+    plt.title(i)
+    plt.ylabel('mol%')
+    count += 1
+</code></pre>
+<h1 id="4-k-means聚类">4 K-means聚类</h1>
+<pre><code class="language-python"># 聚类的目的：找到最常用的几种配比，并将其分类
+k_ellbow = []
+for i in range(1,21):
+    kmeans = KMeans(n_clusters=i).fit(composition)
+    score = kmeans.score(composition)
+    k_ellbow.append(score)
+</code></pre>
+<pre><code class="language-python">plt.title('Elbow Method')
+plt.xlabel('Number of clusters')
+plt.ylabel('Score')
+plt.plot([7,7],[0,np.max(np.gradient(k_ellbow))])
+plt.plot(range(1,21),np.gradient(k_ellbow))
+</code></pre>
+<pre><code class="language-python"># import seaborn as sns
+# com1 = composition.iloc[:,0:2]
+# kmeans = KMeans(n_clusters=3).fit(com1)
+# sns.scatterplot(data=com1, x=&quot;Ag&quot;, y=&quot;Al&quot;,hue=kmeans.labels_)
+# plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1], 
+#             marker=&quot;X&quot;, c=&quot;r&quot;, s=80, label=&quot;centroids&quot;)
+# plt.show()
+</code></pre>
+<pre><code class="language-python">cluster = KMeans(n_clusters=7).fit(composition)
+cluster_pred = cluster.predict(composition) # 对于训练数据等同于cluster.labels_，给每个数据点上标签。
+</code></pre>
+<h1 id="5-pca分析">5 PCA分析</h1>
+<pre><code class="language-python">pca = PCA(n_components=2)
+pca_result = pca.fit_transform(composition)
+</code></pre>
+<h1 id="6-tsne分析">6 TSNE分析</h1>
+<pre><code class="language-python">tsne = TSNE(n_components=2, random_state=42,init='pca')
+tsne_results = tsne.fit_transform(composition)
+</code></pre>
+<pre><code class="language-python">fig ,axs = plt.subplots(1,2)
+plot1 = axs[0].scatter(tsne_results[:,0],tsne_results[:,1],c=cluster_pred,cmap=plt.cm.get_cmap('viridis',7))
+axs[0].set_title('t-SNE')
+plot2 = axs[1].scatter(pca_result[:,0],pca_result[:,1],c=cluster_pred,cmap=plt.cm.get_cmap('viridis',7))
+axs[1].set_title('PCA')
+fig.colorbar(plot2,ax=axs)
+</code></pre>
+<pre><code class="language-python">count = 0
+fig,axs = plt.subplots(3,3)
+element = composition.mean(axis=0).sort_values(ascending=False).head(9).keys()
+for ax in axs.flat:
+    ax.scatter(data_cleaned[element[count]],data_cleaned['S(C2), %'],c=cluster_pred,cmap=plt.cm.get_cmap('viridis',7))
+    ax.set_title(element[count])
+    count += 1
+</code></pre>
+<h1 id="7-svr支持向量回归">7 SVR支持向量回归</h1>
+<pre><code class="language-python">from sklearn.model_selection import train_test_split
+x = composition.fillna(0)
+y = data_cleaned.iloc[:,-2].fillna(0)/100
+x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.2,random_state=42)
+</code></pre>
+<pre><code class="language-python">from sklearn.svm import SVR
+from sklearn.model_selection import RandomizedSearchCV
+</code></pre>
+<pre><code class="language-python">hyper_params_svr = {'gamma':np.random.normal(12,2,10000),'C':np.random.normal(1,0.2,10000)} # 从10000个参数中随机选择10个
+svr_tune = SVR(kernel='rbf')
+g_search_svr = RandomizedSearchCV(svr_tune,hyper_params_svr,cv=5,n_jobs=-1,random_state=42) # n_jobs=-1表示使用所有的CPU，n_iter默认为10
+g_search_svr.fit(x_train,y_train)
+</code></pre>
+<pre><code class="language-python">print('Best Estimator:',g_search_svr.best_estimator_)
+</code></pre>
+<pre><code class="language-python">best_C = g_search_svr.best_estimator_.C
+best_gamma = g_search_svr.best_estimator_.gamma
+svr_rbf = SVR(kernel='rbf',C=best_C,gamma=best_gamma) # 模型训练
+</code></pre>
+<pre><code class="language-python">y_svr = svr_rbf.fit(x_train,y_train)
+predict_svr_train = y_svr.predict(x_train)
+predict_svr_test = y_svr.predict(x_test)
+
+print('SVR Train Score:',svr_rbf.score(x_train,y_train)) # 预测和真实值相同的概率
+print('SVR Test Score:',svr_rbf.score(x_test,y_test))
+</code></pre>
+<pre><code class="language-python">plt.scatter(y_test,predict_svr_test) # 如果数据点分布在y=x上说明训练效果好。
+plt.xlabel('True Values')
+plt.ylabel('Predictions')
+plt.title('SVR Test')
+plt.show()
+</code></pre>
+<h1 id="8-rf随机森林回归">8 RF随机森林回归</h1>
+<pre><code class="language-python">from sklearn.ensemble import RandomForestRegressor
+hyper_params_rdf = {'n_estimators':np.arange(1,25,1)} # 从24个值中选择10个
+rdf_tune = RandomForestRegressor()
+g_search_rdf = RandomizedSearchCV(rdf_tune,hyper_params_rdf,cv=5,n_jobs=-1,random_state=42) # 5折交叉验证
+g_search_rdf.fit(x_train,y_train)
+</code></pre>
+<pre><code class="language-python">print('Best Estimator:',g_search_svr.best_estimator_)
+</code></pre>
+<pre><code class="language-python">estimate_rdf = g_search_rdf.best_estimator_.n_estimators # 树的数量
+</code></pre>
+<pre><code class="language-python">regressor = RandomForestRegressor(n_estimators=estimate_rdf,random_state=42) # 建立模型
+regressor.fit(x_train,y_train) # 训练模型
+</code></pre>
+<pre><code class="language-python">y_pred_train = regressor.predict(x_train)
+y_pred_test = regressor.predict(x_test)
+
+print('RDF Train Score:',regressor.score(x_train,y_train)) # score即R2 score
+print('RDF Test Score:',regressor.score(x_test,y_test))
+</code></pre>
+<pre><code class="language-python">plt.scatter(y_test,y_pred_test) # 如果数据点分布在y=x上说明训练效果好。
+plt.xlabel('True Values')
+plt.ylabel('Predictions')
+plt.title('RDF Test')
+</code></pre>
+<pre><code class="language-python">from sklearn.metrics import mean_squared_error
+from sklearn.metrics import r2_score
+
+mse_rdf_train = mean_squared_error(y_train,y_pred_train) # 1/n * sum(y_train_i - y_pred_train_i)^2
+mse_rdf_test = mean_squared_error(y_test,y_pred_test)
+
+mse_svr_train = mean_squared_error(y_train,predict_svr_train)
+mse_svr_test = mean_squared_error(y_test,predict_svr_test)
+
+r2_rdf_train = r2_score(y_train,y_pred_train)
+r2_rdf_test = r2_score(y_test,y_pred_test)
+
+r2_svr_train = r2_score(y_train,predict_svr_train)
+r2_svr_test = r2_score(y_test,predict_svr_test)
+</code></pre>
+<h1 id="9-rdf-svr分数对比">9 RDF、SVR分数对比</h1>
+<pre><code class="language-python">plt.subplot(121)
+plt.bar(np.arange(4),[mse_rdf_test,mse_svr_test,mse_rdf_train,mse_svr_train])
+plt.xticks(np.arange(4),['RDF Test','SVR Test','RDF Train','SVR Train'])
+plt.ylabel('MSE')
+
+plt.subplot(122)
+plt.bar(np.arange(4),[r2_rdf_test,r2_svr_test,r2_rdf_train,r2_svr_train])
+plt.xticks(np.arange(4),['RDF Test','SVR Test','RDF Train','SVR Train'])
+plt.ylabel('R2')
+</code></pre>
+<pre><code class="language-python">svr_mean_cv_score = g_search_svr.cv_results_['mean_test_score'] # 每个参数的5折交叉验证的平均得分
+rdf_mean_cv_score = g_search_rdf.cv_results_['mean_test_score']
+plt.subplot(121)
+plt.bar(np.arange(10),svr_mean_cv_score)
+plt.title('SVR Mean CV Score')
+plt.subplot(122)
+plt.bar(np.arange(10),rdf_mean_cv_score)
+plt.title('RDF Mean CV Score')
+</code></pre>
+<pre><code class="language-python">from sklearn.feature_selection import SelectFromModel
+
+select_feature = SelectFromModel(RandomForestRegressor(n_estimators=estimate_rdf)) # 建立模型
+select_feature.fit(x_train,y_train)
+selected_feature = x_train.columns[(select_feature.get_support())] # 获取特征重要度大于均值的特征
+print(selected_feature)
+
+importances = regressor.feature_importances_
+indices = np.argsort(importances)[::-1][:10] # 降序排序,返回索引,取前10个
+plt.title('Feature Importance')
+plt.bar(np.arange(10), importances[indices])
+plt.xticks(np.arange(10), x_train.columns[indices], rotation=90)
+
+</code></pre>
+<h1 id="10-深度学习分类和回归">10 深度学习分类和回归</h1>
+<pre><code class="language-python">import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+tf.keras.backend.clear_session()
+model = keras.Sequential([
+    layers.Dense(73,activation='relu',
+    input_shape=(x_train.shape[1],)),# 输入层为68个神经元，一共68个特征，链接到73个神经元
+    layers.Dropout(0.2), # 随机丢弃20%的输入，未丢弃的输入乘1/(1-0.2)=1.25倍，防止过拟合
+    layers.Dense(73,activation='relu'),
+    layers.Dropout(0.2),
+    layers.Dense(73,activation='relu'), # 一共3个隐藏层，每个隐藏层73个神经元
+    layers.Dropout(0.2),
+    layers.Dense(1)
+])
+model.summary() # 查看模型结构
+model.compile(optimizer='rmsprop',loss='mae') # 定义模型，优化器为RMSProp，可以逃离鞍点。损失函数为平均绝对误差
+</code></pre>
+<pre><code class="language-python">model.fit(x_train,y_train,epochs=500,validation_split=0.1,verbose=0) # 训练模型,验证集占训练集的10%,每个epoch输出一次，训练500个epoch，verbose=0表示不输出任何信息
+plt.plot(model.history.epoch, np.array(model.history.history['loss']), label='Train') # 绘制训练损失曲线
+plt.plot(model.history.epoch, np.array(model.history.history['val_loss']), label='Val') # 绘制验证损失曲线
+</code></pre>
+<pre><code class="language-python">predict_nn_test = model.predict(x_test) # 矩阵转向量
+predict_nn_train = model.predict(x_train)
+print('NN Train Score:',r2_score(y_train,predict_nn_train))
+print('NN Test Score:',r2_score(y_test,predict_nn_test))
+</code></pre>
+<pre><code class="language-python">plt.scatter(y_test,predict_nn_test) # 如果数据点分布在y=x上说明训练效果好。
+plt.xlabel('True Values')
+plt.ylabel('Predictions')
+plt.title('NN Test')
+</code></pre>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#1-%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93">1 导入数据库</a></li>
+<li><a href="#2-%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE">2 读取数据</a></li>
+<li><a href="#3-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86">3 数据处理</a></li>
+<li><a href="#4-k-means%E8%81%9A%E7%B1%BB">4 K-means聚类</a></li>
+<li><a href="#5-pca%E5%88%86%E6%9E%90">5 PCA分析</a></li>
+<li><a href="#6-tsne%E5%88%86%E6%9E%90">6 TSNE分析</a></li>
+<li><a href="#7-svr%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E5%9B%9E%E5%BD%92">7 SVR支持向量回归</a></li>
+<li><a href="#8-rf%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E5%9B%9E%E5%BD%92">8 RF随机森林回归</a></li>
+<li><a href="#9-rdf-svr%E5%88%86%E6%95%B0%E5%AF%B9%E6%AF%94">9 RDF、SVR分数对比</a></li>
+<li><a href="#10-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%88%86%E7%B1%BB%E5%92%8C%E5%9B%9E%E5%BD%92">10 深度学习分类和回归</a></li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+</script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"><a href="mailto:linqiyuan2016@gmail.com"title="envelope"><i class="iconfont icon-envelope"></i></a><a href="https://qoclub.site/atom.xml"title="rss"><i class="iconfont icon-rss"></i></a></div></div><div class="copyright"id="copyright"><!--<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	<span id="busuanzi_container_site_uv" style='display:none'>访客数<span id="busuanzi_value_site_uv"></span>次          &nbsp;              
+ </span>
+	<span id="busuanzi_container_site_pv" style='display:none'>访问量<span id="busuanzi_value_site_pv"></span>次</span>
+</div>-->Copyright © 2018-2022 <a href="https://qoclub.site" style="margin:0;">可乐不加冰🥤</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>37</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script type="text/javascript" async src="https://qoclub.site/media/js/prism.js"></script>
+</body>
+</html>

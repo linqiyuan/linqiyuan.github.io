@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://qoclub.site/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="唯有真诚打动人"><meta charset="UTF-8"><title>机器学习中要避免的三个陷阱 | 可乐不加冰🥤</title>
+<link href="https://qoclub.site/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://qoclub.site/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+<link rel="canonical" href="https://qoclub.site/post/ji-qi-xue-xi-zhong-yao-bi-mian-de-san-ge-xian-jing/" />
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://qoclub.site"><img alt="logo" style="display:inline-block;" src="https://qoclub.site/images/avatar.png"/></a><h1 title="可乐不加冰🥤" class="weaklink"><a  href="/">可乐不加冰🥤</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >🏠️主页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/math" class="selected active current nav__item" >数学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/phy" class="selected active current nav__item" >物理</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/Chem" class="selected active current nav__item" >化学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/compute" class="selected active current nav__item" >计算</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/recommand" class="selected active current nav__item" >推荐</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >🏠️主页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/math" class="selected active current nav__item" >数学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/phy" class="selected active current nav__item" >物理</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/Chem" class="selected active current nav__item" >化学</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/compute" class="selected active current nav__item" >计算</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/recommand" class="selected active current nav__item" >推荐</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1666370266414" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>机器学习中要避免的三个陷阱</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2021-07-26</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://qoclub.site/tag/N2dVHJDzo/" class="tag">电子信息</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">3083字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">11 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<p>摘要：</p>
+<ol>
+<li>拆分数据时要注意时间趋势</li>
+<li>要注意隐藏变量，可以使用多个机器学习模型来检测</li>
+<li>要选择合适的目标，否则我们将产生回答错误问题的精确系统</li>
+</ol>
+<!-- more -->
+<p>机器学习正在推动跨学科的发现。其强大的<code>模式发现</code>和<code>预测工具</code>正在帮助各个领域的研究人员——从寻找<code>制造分子的新方法和在分析中发现细微信号，到</code>改进医学诊断和揭示基本粒子`。</p>
+<p>然而，机器学习工具也可以变成傻瓜的金子——<code>误报、死胡同和错误</code>。许多算法非常复杂，以至于无法检查所有参数或推断出输入是如何被操纵的。随着这些算法开始得到越来越广泛的应用，误解、错误结论和浪费科学努力的风险将呈螺旋式上升。</p>
+<p>这些问题并不新鲜。几十年来，机器学习领域一直在解决<code>“坦克问题”</code>。最初的研究似乎出现在 1960 年代（参考文献 1 是本研究已知的最早的似是而非的参考文献；感谢软件工程师杰夫考夫曼）并且被时间的迷雾所掩盖，但故事是这样的。研究人员编写了一种算法，可以在军方提供的照片中发现坦克。该模型在测试图像中成功找到了坦克。但后来在该领域的真实照片中失败了。为什么？复述的细节各不相同，但训练它的图片包含其他模式——坦克出现在晨光中，或在云层下。因此，驱动算法的是诸如此类的其他因素，而不是坦克的存在。</p>
+<p>类似的困惑正在引起今天的反省<sup><a href="https://www.nature.com/articles/d41586-019-02307-y#ref-CR2">2</a></sup>。许多机器学习论文<code>未能进行足够的实验</code>。<code>审查标准不一致</code>。竞争正在鼓励一些研究人员在认为自己得到想要的答案后走捷径并跳过检查。</p>
+<p>我们无法预测每次分析会出现的所有困难。但是，至少，将机器学习引入他们领域的研究人员<code>应该熟悉常见的陷阱</code>以及他们可以用来<code>检测和避免它们的做法</code>。</p>
+<p>为了说明这一点，我强调了我们在<a href="http://g.co/research/gas">Google Accelerated Science </a>团队中面临和克服的机器学习分析中的三个问题。</p>
+<h2 id="1-不恰当地拆分数据">1. 不恰当地拆分数据</h2>
+<p>在构建模型时，机器学习从业者通常将数据分解为训练集和测试集。训练集教授模型，模型的性能通过它对测试集的描述程度来评估。研究人员通常<code>随机拆分数据</code>。但现实生活中的数据很少是随机的。它们可能包含<code>时间趋势</code>——例如来自收集数据方式的变化，或者来自对收集哪些信息的不同选择。</p>
+<p>例如，这些历史模式隐藏在分子数据集中，机器学习算法对这些数据进行了虚拟筛选，以寻找候选药物。挑战在于预测假设的分子将如何有效地被吸收到体内或减少炎症。筛选从具有或不具有预期效果的分子数据开始。但是收集数据的上下文可能与机器学习模型的使用方式不同。</p>
+<p>例如，模型可能建立在一组公开可用的分子上，但随后用于不同的专有组。当有希望的线索被检查和丢弃时，化学家的目光经常从某些分子组转移到其他分子组。因此，研究人员经常高估模型在实践中的表现<sup><a href="https://www.nature.com/articles/d41586-019-02307-y#ref-CR3">3</a></sup>。这可能会导致预期过高，并且会在<code>选择不当的分子上浪费时间和金钱</code>。许多模型构建者（包括我自己）都掉进了这个陷阱。</p>
+<p>换句话说，您要回答的问题应该会影响您拆分数据的方式。对于预测将几个原子添加到分子中的效果的模型，测试集中的每个分子都应该在训练集中有一个有几个原子差异的partner。如果你想对化学上不同的分子进行良好的预测，<code>测试集中的每个分子都应该与训练集中的所有分子都不同</code>。拆分数据的“正确”方法可能并不明显，但仔细考虑并尝试多种方法将提供更多见解。</p>
+<h2 id="2-隐藏的变量">2. 隐藏的变量</h2>
+<p>在理想的实验中，研究人员只更改感兴趣的变量并修复所有其他变量。这种级别的控制在现实世界中通常是不可能的。设备的准确性随时间漂移，试剂批次不同，一种实验条件先于另一种条件进行，结果甚至会因天气而产生偏差。这种不受控制的变量在机器学习模型中可能是有害的。</p>
+<p>例如，我在 Google 的团队一直在与位于加利福尼亚州山麓牧场的核聚变初创公司 TAE Technologies 合作，以优化生产高能等离子体的实验。我们建立模型以尝试了解等离子机的最佳设备设置。有数百个控制参数，从何时给电极通电到在磁铁上设置的电压。记录了一系列测量值，包括温度和光谱。</p>
+<p>我们在几个月内从等离子机器的数千次运行中获取数据。随着设备的调整和修改以及组件磨损和尝试不同的想法，设置会有所不同。当我们得到一个模型时，我们很高兴，在给定的设置下，可以很好地预测等离子体的能量是否会很高。很快，很明显我们的预测不准了。</p>
+<p>当我们再次训练模型时，以<code>实验时间作为唯一输入</code>，而不是机器的所有设置，我们得到了类似的预测能力。为什么？我们认为我们的第一个模型<code>锁定了时间趋势</code>，而不是物理现象。随着实验的进行，机器有一段时间运行良好，也有一段时间没有运行。因此，完成实验的时间为您提供了有关产生的等离子体是否为高能的一些信息。此外，可以根据控制参数的设置粗略预测实验何时完成——这些参数的变化也存在时间趋势。</p>
+<p>隐藏变量也可能源于<code>实验的布局</code>。例如，我们正在与许多合作者合作解释显微镜图像，包括纽约市的纽约干细胞基金会研究所。这些图像包括平板上的生物实验阵列——通常是包含细胞和液体的井网格。目标是发现具有某些特征的孔，例如化学处理后细胞外观的变化。但生物变异意味着每个板块看起来总是略有不同。并且在一个盘子上可能会有变化。边缘通常看起来与中心不同，例如，如果更多的液体在外围孔中蒸发或板倾斜的状况。</p>
+<p>机器学习算法可以轻松识别这些无意的变化。例如，模型可能只识别哪些孔位于板的边缘。检查是否发生这种情况的一种简单方法是让模型预测其他事情，例如盘子上的位置、它是哪个盘子以及图像来自哪个批次。如果它可以做到这一点，请怀疑您的结果。</p>
+<p>带回家的教训是：<code>使用多个机器学习模型来检测意外和隐藏的变量</code>。一种模型关注您关心的问题——等离子体是高能还是低能；细胞是健康的还是生病的？其他模型清除了混杂因素。如果<code>后一个结果很强</code>，请标准化您的数据，进行进一步的实验或调整您的结论。</p>
+<h2 id="3-错误的目标">3. 错误的目标</h2>
+<p>机器学习算法要求研究人员指定一个<code>“损失函数”</code>，它决定了各种错误的严重程度——例如是两个错误各 1% 更好，还是单个错误 2% 更好。从业者倾向于使用一小组函数，这些函数可能无法捕捉到他们真正关心的东西。</p>
+<p>例如，我们一直在使用机器学习来协助求解偏微分方程。这些公式在各个学科中都很常见，包括流体动力学、电磁学、材料科学、天体物理学和经济建模。通常，它们必须以数值方式求解，我们训练模型以在有限的分辨率下提供更好的精度。</p>
+<p>我们从一个方程开始描述<code>水波如何在一维中传播</code>。该算法的任务是重复预测当前时间步长的下一个时间步长。我们有两种略有不同的公式，并在两者上训练了模型。根据我们的损失函数，这两个模型同样出色。然而，一个产生了废话，而另一个则接近预期的结果。</p>
+<p>为什么？控制学习的损失函数只考虑下一步的误差，而不考虑解决方案在<code>许多步骤中的有效性</code>，这才是我们真正想要的。</p>
+<p>我们在机器筛查糖尿病视网膜病变的工作中也出现了不同的目标，糖尿病视网膜病变是糖尿病的并发症，也是世界上可预防失明的主要原因。如果从眼睛后部的图像中及早发现，这种情况可以得到有效治疗。当我们收集数据并让眼科医生根据图像提供诊断时，我们要求机器学习工具预测眼科医生会说什么。出现了两个问题。</p>
+<p>首先，眼科医生经常对诊断意见不一。因此，我们意识到我们的模型不能基于单一预测。我们也<code>不能使用多数票</code>，因为在医疗准确性方面，有时少数意见是正确的。其次，单一疾病的诊断实际上并不是真正的目标。我们应该问：“这个病人应该去看医生吗？” 因此，我们将目标从单一疾病的诊断扩展到多种疾病。</p>
+<p>机器学习从业者很容易专注于数据和标签清晰的“明显”目标。但他们可能正在设置算法来<code>解决错误的问题</code>。必须牢记总体目标，否则我们将产生回答错误问题的精确系统。</p>
+<h2 id="4-接下来">4. 接下来</h2>
+<p>首先，机器学习专家需要让自己和他们的同事达到更高的标准。当新的实验室设备到货时，我们希望我们的实验室伙伴了解其<code>功能</code>、如何<code>校准</code>、如何<code>检测错误</code>并了解其能力的极限。机器学习也是如此。不涉及魔法，使用工具的人必须理解这些工具。</p>
+<p>其次，不同学科需要为如何在其领域执行和报告机器学习<code>制定明确的标准</code>。适当的控制、健全性检查和错误测量会因领域而异，这些需要清楚地说明，以便研究人员、审稿人和编辑能够鼓励良好的行为。</p>
+<p>第三，机器学习科学家的教育需要包括这些更广泛的问题。尽管存在一些资源（例如http://ai.google/education），但我们还需要做更多的工作。我们经常教授算法和工具，但学生需要更多地了解如何应用他们的算法并适当地提出问题。</p>
+<p>我们正处于一个惊人的时刻——计算能力、数据和算法正在结合在一起，在机器学习的帮助下为发现创造巨大的机会。作为一个科学界，我们有责任确保我们好好利用这个机会。</p>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1-%E4%B8%8D%E6%81%B0%E5%BD%93%E5%9C%B0%E6%8B%86%E5%88%86%E6%95%B0%E6%8D%AE">1. 不恰当地拆分数据</a></li>
+<li><a href="#2-%E9%9A%90%E8%97%8F%E7%9A%84%E5%8F%98%E9%87%8F">2. 隐藏的变量</a></li>
+<li><a href="#3-%E9%94%99%E8%AF%AF%E7%9A%84%E7%9B%AE%E6%A0%87">3. 错误的目标</a></li>
+<li><a href="#4-%E6%8E%A5%E4%B8%8B%E6%9D%A5">4. 接下来</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+</script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"><a href="mailto:linqiyuan2016@gmail.com"title="envelope"><i class="iconfont icon-envelope"></i></a><a href="https://qoclub.site/atom.xml"title="rss"><i class="iconfont icon-rss"></i></a></div></div><div class="copyright"id="copyright"><!--<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	<span id="busuanzi_container_site_uv" style='display:none'>访客数<span id="busuanzi_value_site_uv"></span>次          &nbsp;              
+ </span>
+	<span id="busuanzi_container_site_pv" style='display:none'>访问量<span id="busuanzi_value_site_pv"></span>次</span>
+</div>-->Copyright © 2018-2022 <a href="https://qoclub.site" style="margin:0;">可乐不加冰🥤</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>37</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script type="text/javascript" async src="https://qoclub.site/media/js/prism.js"></script>
+</body>
+</html>
